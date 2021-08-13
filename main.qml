@@ -40,17 +40,18 @@ Window {
         text: qsTr("Living Atlas")
     }
 
-    Grid {
+    GridView {
+        id: grid
         anchors.bottom: interanalFrame.bottom
         anchors.horizontalCenter: interanalFrame.horizontalCenter
 
-        columns: 2
-        spacing: 5
-        Tile {}
-        Tile {}
-        Tile {}
-        Tile {}
-        Tile {}
-        Tile {}
+        width: 400; height: 600
+        cellWidth: 200; cellHeight: 200
+
+        //columns: 2
+        //spacing: 5
+        //Tile {}
+        model: 6
+        delegate: Tile {}
     }
 }

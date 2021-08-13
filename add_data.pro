@@ -8,7 +8,9 @@ CONFIG += c++11
 
 SOURCES += \
         add_data_window.cpp \
-        main.cpp
+        main.cpp \
+        tile.cpp \
+        tileloader.cpp
 
 RESOURCES += qml.qrc
 
@@ -24,6 +26,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    add_data_window.h
+    add_data_window.h \
+    tile.h \
+    tileloader.h
 
 DISTFILES +=

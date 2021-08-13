@@ -40,9 +40,6 @@ Rectangle {
              }
                 // containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
 
-             x: mousearea.mouseX
-             y: mousearea.mouseY
-
              NumberAnimation on background.opacity {
                      running: tooltip.visible
                      from: 0; to: 1
