@@ -1,6 +1,6 @@
 QT += quick
 
-CONFIG += c++11
+CONFIG += c++14
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -9,8 +9,8 @@ CONFIG += c++11
 SOURCES += \
         add_data_window.cpp \
         main.cpp \
-        tile.cpp \
-        tileloader.cpp
+        tileList.cpp \
+        tilemodel.cpp
 
 RESOURCES += qml.qrc
 
@@ -27,7 +27,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     add_data_window.h \
-    tile.h \
-    tileloader.h
-
-DISTFILES +=
+    tileList.h \
+    tilemodel.h

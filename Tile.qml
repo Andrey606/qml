@@ -16,11 +16,14 @@ Rectangle {
     property int margin: 3
     property int bottomPlate: 50
 
-    property string tiptext: "Owner: \nItem Type: \nCreated: \nModified: \nViews: \nTags: \nCredits: "
-    property string titleicon: "file:///C:/Users/akuluiev/Documents/add_data/gear-50.png"
-    property string titletext: "Bundesländergrenzen 2018"
-    property string titlelink: "http://www.arcgis.com/home/item.html?id=d3a78deedc0749eeb3ed9069773d5551/"
-    property string imagepath: "file:///C:/Users/akuluiev/Documents/add_data/Imagery.png"
+    property string tiptext: ""
+    property string titleicon: ""
+    property string titletext: ""
+    property string titlelink: ""
+    property string imagepath: ""
+
+    signal clicked()
+
 
     MouseArea {
         id: mousearea
@@ -130,7 +133,8 @@ Rectangle {
                 }
 
                 onClicked: {
-                    console.log("title uploading")
+                    rectangle.clicked()
+                    //console.log("title uploading")
                 }
             }
         }

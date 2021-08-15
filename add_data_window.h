@@ -5,7 +5,7 @@
 
 
 class QQmlApplicationEngine;
-
+class TileList;
 
 namespace gui
 {
@@ -19,6 +19,7 @@ public:
 
 private:
     QQmlApplicationEngine* m_engine;
+    TileList *tileList;
 
 signals:
 

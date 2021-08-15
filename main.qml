@@ -3,6 +3,8 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
+import Tile 1.0
+
 Window {
     title: qsTr("Add data")
     width: 800
@@ -40,6 +42,7 @@ Window {
         text: qsTr("Living Atlas")
     }
 
+
     GridView {
         id: grid
         anchors.bottom: interanalFrame.bottom
@@ -48,10 +51,26 @@ Window {
         width: 400; height: 600
         cellWidth: 200; cellHeight: 200
 
-        //columns: 2
-        //spacing: 5
-        //Tile {}
-        model: 6
-        delegate: Tile {}
+        ScrollBar.vertical: ScrollBar {}
+
+        model: TileModel {
+            list: tileList
+        }
+        delegate: Tile {
+            tiptext: model.description
+            titleicon: model.icon
+            titletext: model.title
+            titlelink: model.link
+            imagepath: model.picture
+
+            onClicked:{
+                console.log(titletext)
+            }
+
+            //imagemouseArea.onClicked: {
+             //   console.log("title uploading")
+            //}
+        }
     }
+
 }
