@@ -58,7 +58,7 @@ Window {
         }
         delegate: Tile {
             tiptext: model.description
-            titleicon: model.icon
+            titleicon: "qrc:/icons/Map.png"
             titletext: model.title
             titlelink: model.link
             imagepath: model.picture
